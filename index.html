@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SpaceX Klok</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="script/main.js" defer></script> 
 </head>
 
@@ -14,14 +13,14 @@
         <figure>
             <img src="images/spacex-white.png" id="logo" alt="logo">
         </figure>
-        <h1>Klok</h1>
     </header>
     <main>
-    	<article class="grid-item pie"><canvas id="doughnut"></canvas></article>
-        <article class="grid-item elektra"><canvas id="doughnut2"></canvas></article>
-    	<article class="grid-item bar"><canvas id="myChart"></canvas></article>
-    	
-        
+    	<article class="grid-item klok">
+         <span id="klok"></span>   
+        </article>   
+        <article class="grid-item datum">
+         <span id="datum"></span>   
+        </article> 
     </main>
 </body>
 

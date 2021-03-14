@@ -1,16 +1,16 @@
 /* Hier komt de main stijling (voor mobiel) */
+
 @font-face {
   font-family: 'Poppins';
   src: url('../fonts/Poppins-Light.ttf'); 
 } 
-
 
 body {
     width: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', Arial;
-    color: white;  
+    color: black;  
     background-image: url("../images/wereld.png");
     background-size: cover;  
 }
@@ -35,8 +35,8 @@ h1, figure{
     margin-right: auto;
 }
 
-/* Stijling voor de articles */
 
+/* Stijling voor de articles */
 
 article {
 	display: flex;
@@ -51,97 +51,26 @@ p {
     margin-top: 7%;
 }
 
-.pie, .elektra, .bar, .info {
-    background-color: rgba(255, 255, 255, 0.7);
-}
-
-/* Stijling voor de eten- en waterbalk */
-
-.eten p, .water p {
-    color: black;
-}
-
-.eten, .water {
-    display: inline-flex;
-}
-
-#etensbalk, #waterbalk {
-    position: relative;
-    background-color: black;
-    margin: 30px;
-    border-radius: 1em;
-    width: 7em;
-    height: 20px;
-}
-
-#balk {
-    background-color: rgb(58, 255, 36);
-    width: 4em;
-    height: 20px;
-    border-radius: 1em;
-}
-
-#balk2 {
-    background-color: rgb(0, 128, 255);
-    width: 6em;
-    height: 20px;
-    border-radius: 1em;
+#klok, #datum {
+    font-size: 4em;
+    width:100vw;
 }
 
 
 
 /* iPad scherm */
 @media only screen and (min-width: 700px) and (max-width: 1000px) {  
-    main {
-        display: grid;
-        grid-template-columns: 45% 45%;
-        grid-column-gap: 5%;
-    }
 
-    .pie, .elektra, .bar, .info {
-        width: auto;
-        max-height: 270px;
-    }
-
-    .info {
-        display:block;
-    }
    
 }
 
 /* Media querie - Laptop */
 @media only screen and (min-width: 1000px) and (max-width: 1700px){
-    main {
-        display: grid;
-        grid-template-columns: 66.66% 30% ;
-        grid-column-gap: 5%;
-    }
 
-    .info {
-        display:block;
-        font-size: 23px;
-    }
-
-    .elektra, .info {
-        height: 200px;
-    }
 }
 
 /* Media querie - Desktop */
 @media only screen and (min-width: 1700px) {
-    main {
-        display: grid;
-        grid-template-columns: 75% 25% ;
-        grid-column-gap: 5%;
-    }
-
-    .info {
-        display: block;
-        font-size: 25px;
-    }
-
-    .elektra, .info {
-        height: 200px;
-    }
+  
 
 }
