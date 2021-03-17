@@ -149,7 +149,7 @@ main {
     display: grid;
     grid-template-columns: 45% 45%;
     grid-column-gap: 5%;
-    }
+}
 
 #bericht{
     grid-template-columns: 2/2;

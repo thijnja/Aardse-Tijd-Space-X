@@ -31,14 +31,12 @@ var titel2 = document.getElementById('titel2');
 if(h >=6 && h < 12){
 document.getElementById('opstaan').className ='laatZien';
 achtergrond.classList.add('veranderKleurOchtend');
-
 }
 
 // het is middag
 else if(h >= 12 && h < 18){
 document.getElementById('lunchen').className ='laatZien';
 achtergrond.classList.add('veranderKleurMiddag');
-
 }
 
 // het is avond
