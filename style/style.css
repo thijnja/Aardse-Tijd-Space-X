@@ -11,7 +11,8 @@ body {
     padding: 0;
     font-family: 'Poppins', Arial;
     color: black;  
-    background-image: url("../images/wereld.png");
+    /*background-image: url("../images/wereld.png");*/
+    background-color: yellow;
     background-size: cover;  
 }
 
@@ -19,6 +20,16 @@ main {
     margin: auto;
     width: 92.5%;
 }
+
+#achtergrond {
+    background-color: #FFD991;
+}
+
+#achtergrond.veranderKleur {
+    transition-duration: 100s;
+    background-color: #FFA700;
+}
+
 
 /* Stijling voor de header */
 
@@ -42,9 +53,10 @@ article {
 	display: flex;
     background: white;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 6rem;
     padding: 1rem;
-    border-radius: 0.5em;  
+    border-radius: 0.5em;
+    box-shadow: 2px 5px #888888;  
 }
 
 p {
@@ -56,17 +68,28 @@ p {
     width:100vw;
 }
 
+/* stijling afbeelding */
+#slapen-plaatje, #opstaan-plaatje{
+    width: 40px;
+    padding: 20px;
+}
 
 
 /* iPad scherm */
 @media only screen and (min-width: 700px) and (max-width: 1000px) {  
-
+span{
+    margin: 7%;
+}
    
 }
 
 /* Media querie - Laptop */
 @media only screen and (min-width: 1000px) and (max-width: 1700px){
-
+main {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-column-gap: 5%;
+    }
 }
 
 /* Media querie - Desktop */

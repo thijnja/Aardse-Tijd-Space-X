@@ -19,6 +19,16 @@ var datum = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear();
 
 document.getElementById('datum').innerHTML = datum;
 
+
+var achtergrond = document.getElementById('achtergrond');
+
+achtergrond.classList.add('veranderKleur');
+
+
+
+
+
+
 /*
 var s = today.getSeconds();
     if (s < 10) {
