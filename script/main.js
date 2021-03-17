@@ -22,7 +22,23 @@ document.getElementById('datum').innerHTML = datum;
 
 var achtergrond = document.getElementById('achtergrond');
 
-achtergrond.classList.add('veranderKleur');
+achtergrond.classList.add('veranderKleurOchtend');
+/*
+// ochtend
+else if(uren >=6 && uren < 12){
+document.getElementById('container').className ='kleurochtend'; 
+}
+
+//het is middag
+else if(uren >= 12 && uren < 18){
+document.getElementById('container').className ='kleurnacht';
+}
+
+// het is nacht
+if(h < 6){
+document.getElementById('container').className ='kleurnacht';
+    
+}
 
 
 
