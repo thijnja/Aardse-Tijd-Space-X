@@ -16,35 +16,45 @@ setInterval(time, 1000);
 var today = new Date();
 
 var datum = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear();
+var h = today.getHours();
 
 document.getElementById('datum').innerHTML = datum;
 
 
 var achtergrond = document.getElementById('achtergrond');
+var titel1 = document.getElementById('titel1');
+var titel2 = document.getElementById('titel2');
 
+
+// ochtend
+if(h >=6 && h < 12){
+document.getElementById('opstaan').className ='laatZien';
 achtergrond.classList.add('veranderKleurOchtend');
 
-/*// ochtend
-else if(uren >=6 && uren < 12){
-document.getElementById('container').className ='kleurochtend'; 
 }
 
 //het is middag
-else if(uren >= 12 && uren < 18){
-document.getElementById('container').className ='kleurnacht';
-}
+else if(h >= 12 && h < 18){
+document.getElementById('lunchen').className ='laatZien';
+achtergrond.classList.add('veranderKleurMiddag');
 
-// het is nacht
-if(h < 6){
-document.getElementById('container').className ='kleurnacht';
-    
 }
 
 
+// het is avond
+else{
+document.getElementById('slapen').className ='laatZien';
+achtergrond.classList.add('veranderKleurAvond');  
+titel1.classList.add('veranderTitel');
+titel2.classList.add('veranderTitel');  
+}
 
 
 
 
+
+
+/*
 
 var s = today.getSeconds();
     if (s < 10) {

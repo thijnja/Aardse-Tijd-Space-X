@@ -12,7 +12,6 @@ body {
     font-family: 'Poppins', Arial;
     color: black;  
     /*background-image: url("../images/wereld.png");*/
-    background-color: yellow;
     background-size: cover;  
 }
 
@@ -30,7 +29,26 @@ main {
     background-color: #FFA700;
 }
 
+#achtergrond.veranderKleurMiddag {
+    transition-duration: 100s;
+    background-color: #ff6666;
+}
 
+#achtergrond.veranderKleurAvond {
+    transition-duration: 100s;
+    background-color: #000033;
+}
+
+#titel1.veranderTitel {
+    color: white;
+    transition-duration: 100s;
+}
+
+#titel2.veranderTitel {
+    color: white;
+    transition-duration: 100s;
+
+}
 /* Stijling voor de header */
 
 h1, figure{
@@ -68,8 +86,30 @@ p {
     width:100vw;
 }
 
+#bericht {
+    font-size: 1em;
+}
+
+#slapen, #lunchen, #opstaan{
+    display: none;
+} 
+
+#opstaan.laatZien {
+    display: inline-block;
+}
+
+#lunchen.laatZien{
+    display: inline-block;
+}
+
+#slapen.laatZien {
+    display: inline-block;
+}
+
+
+
 /* stijling afbeelding */
-#slapen-plaatje, #opstaan-plaatje{
+#slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje{
     width: 40px;
     padding: 20px;
 }
@@ -89,6 +129,15 @@ p {
     span{
         margin: 7%;
     }
+
+    #bericht {
+    font-size: 30px;
+    }
+
+    #slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje{
+    width: 75px;
+    padding-left: 60px;
+}
    
 }
 
@@ -106,17 +155,36 @@ main {
     grid-template-columns: 2/2;
 }
 
+#bericht {
+    font-size: 2em;
+}
+
+#slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje{
+    display: block;
+    width: 20%;
+    margin-left: 40%;
+  }
+
+
 }
 
 /* Media querie - Desktop */
 @media only screen and (min-width: 1700px) {
-  main {
-        display: grid;
-        grid-template-columns: 45% 45%;
-        grid-column-gap: 5%;
-        max-width: 1400px;
-    }
+main {
+display: grid;
+grid-template-columns: 45% 45%;
+grid-column-gap: 5%;
+max-width: 1550px;
+}
 
-  }
+#bericht {
+font-size: 2.5em;
+}
+
+#slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje {
+display: block;
+width: 20%;
+margin-left: 40%;
+}
 
 }
