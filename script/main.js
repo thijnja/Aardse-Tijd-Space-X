@@ -23,8 +23,8 @@ document.getElementById('datum').innerHTML = datum;
 var achtergrond = document.getElementById('achtergrond');
 
 achtergrond.classList.add('veranderKleurOchtend');
-/*
-// ochtend
+
+/*// ochtend
 else if(uren >=6 && uren < 12){
 document.getElementById('container').className ='kleurochtend'; 
 }
@@ -45,7 +45,7 @@ document.getElementById('container').className ='kleurnacht';
 
 
 
-/*
+
 var s = today.getSeconds();
     if (s < 10) {
     s = '0' + s;
