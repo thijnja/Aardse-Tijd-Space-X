@@ -155,7 +155,7 @@ main {
     grid-template-columns: 2/2;
 }
 
-#bericht {
+#bericht, h2 {
     font-size: 2em;
 }
 
