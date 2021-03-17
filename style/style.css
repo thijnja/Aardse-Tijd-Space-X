@@ -11,7 +11,6 @@ body {
     padding: 0;
     font-family: 'Poppins', Arial;
     color: black;  
-    /*background-image: url("../images/wereld.png");*/
     background-size: cover;  
 }
 
@@ -19,7 +18,7 @@ main {
     margin: auto;
     width: 92.5%;
 }
-
+/* Stijling voor de animaties */
 #achtergrond {
     background-color: #FFD991;
 }
@@ -86,14 +85,17 @@ p {
     width:100vw;
 }
 
+/* Stijling voor de berichtgeving */
 #bericht {
     font-size: 1em;
 }
 
+/* Alle berichten worden verborgen */
 #slapen, #lunchen, #opstaan{
     display: none;
 } 
 
+/* Berichten worden getoond */
 #opstaan.laatZien {
     display: inline-block;
 }
@@ -107,8 +109,7 @@ p {
 }
 
 
-
-/* stijling afbeelding */
+/* stijling afbeelding berichten */
 #slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje{
     width: 40px;
     padding: 20px;
@@ -126,17 +127,17 @@ p {
 /* iPad scherm */
 @media only screen and (min-width: 700px) and (max-width: 1000px) {  
 
-    span{
-        margin: 7%;
-    }
+span{
+    margin: 7%;
+}
 
-    #bericht {
-    font-size: 30px;
-    }
+#bericht {
+font-size: 30px;
+}
 
-    #slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje{
-    width: 75px;
-    padding-left: 60px;
+#slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje{
+width: 75px;
+padding-left: 60px;
 }
    
 }
@@ -144,11 +145,10 @@ p {
 /* Media querie - Laptop */
 @media only screen and (min-width: 1000px) and (max-width: 1700px){
 
-
 main {
-        display: grid;
-        grid-template-columns: 45% 45%;
-        grid-column-gap: 5%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 5%;
     }
 
 #bericht{
@@ -163,8 +163,7 @@ main {
     display: block;
     width: 20%;
     margin-left: 40%;
-  }
-
+}
 
 }
 
