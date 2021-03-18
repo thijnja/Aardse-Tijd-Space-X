@@ -18,34 +18,73 @@ main {
     margin: auto;
     width: 92.5%;
 }
-/* Stijling voor de animaties */
+
 #achtergrond {
-    background-color: #FFD991;
+   background-color: #FFD991;  
 }
+/* Stijling voor de animaties */
 
+/* Ochtend achtergrond */
 #achtergrond.veranderKleurOchtend {
-    transition-duration: 100s;
+    animation: 100s ochtend infinite;
+}
+
+@keyframes ochtend {
+  0% { 
+    background-color: #FFD991; 
+  }
+  50% { 
     background-color: #FFA700;
+  } 
+  100% { 
+    background-color: #FFD991; 
+  }
 }
 
+/* Middag achtergrond */
 #achtergrond.veranderKleurMiddag {
-    transition-duration: 100s;
+    animation: 100s middag infinite;
+}
+
+@keyframes middag {
+   0% { 
+    background-color: #FFA700; 
+  }
+
+  50% { 
     background-color: #ff6666;
+  } 
+
+  100% { 
+    background-color: #FFA700;
+  } 
 }
 
+/* Avond achtergrond */
 #achtergrond.veranderKleurAvond {
-    transition-duration: 100s;
-    background-color: #000033;
+    animation: 100s avond infinite;
 }
 
+@keyframes avond {
+  0% { 
+    background-color: #FFA700; 
+  }
+  50% { 
+    background-color: #000033;
+  } 
+  100% { 
+    background-color: #FFA700; 
+  }
+}
+/* Verander de titels naar wit */
 #titel1.veranderTitel {
     color: white;
-    transition-duration: 100s;
+    transition-duration: 50s;
 }
 
 #titel2.veranderTitel {
     color: white;
-    transition-duration: 100s;
+    transition-duration: 50s;
 
 }
 /* Stijling voor de header */
@@ -68,12 +107,32 @@ h1, figure{
 
 article {
 	display: flex;
-    background: white;
-    text-align: center;
-    margin-bottom: 6rem;
-    padding: 1rem;
-    border-radius: 0.5em;
-    box-shadow: 2px 5px #888888;  
+  background: white;
+  text-align: center;
+  margin-bottom: 6rem;
+  padding: 1rem;
+  border-radius: 0.5em;
+  box-shadow: 2px 5px #888888;  
+}
+
+/* Animaties voor de klok en datum */
+#wrapper:hover {
+    animation: 3s groter alternate infinite ease-in-out;
+}
+
+@keyframes groter {
+  0% { 
+    width: 95%; 
+  }
+
+  50% {
+  width: 97%;
+  }
+
+  100% { 
+    width: 95%;
+
+  }
 }
 
 p {
@@ -82,12 +141,13 @@ p {
 
 #klok, #datum {
     font-size: 4em;
-    width:100vw;
+    width: 100vw;
 }
 
 /* Stijling voor de berichtgeving */
 #bericht {
     font-size: 1em;
+
 }
 
 /* Alle berichten worden verborgen */
@@ -113,23 +173,46 @@ p {
 #slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje{
     width: 40px;
     padding: 20px;
+    margin: 0px;
 }
 
+#slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje{
+    animation: 3000ms pulsate infinite alternate ease-in-out;
+}
+
+
+@keyframes pulsate {
+  0% { 
+    width: 20%; 
+  }
+  100% { 
+    width: 23%; 
+  }
+}
+
+/* ------ ALLE MEDIA QUERIES -------- */
 /* Telefoon scherm */
 @media only screen and (max-width: 700px) {  
 
     h1 {
         display: none;
     }
-
+    #slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje{
+      display: block;
+      margin-left: 35%;
+    }
 }
 
 /* iPad scherm */
 @media only screen and (min-width: 700px) and (max-width: 1000px) {  
-
-span{
-    margin: 7%;
+h1 {
+    display: none;
 }
+
+article {
+    margin: 40px;
+}
+
 
 #bericht {
 font-size: 30px;
@@ -137,7 +220,8 @@ font-size: 30px;
 
 #slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje{
 width: 75px;
-padding-left: 60px;
+display: block;
+margin-left: 39%;
 }
    
 }
@@ -163,27 +247,30 @@ main {
     display: block;
     width: 20%;
     margin-left: 40%;
+    margin-top: 30px;
 }
 
 }
 
 /* Media querie - Desktop */
 @media only screen and (min-width: 1700px) {
+/* Maximale breedte voor de main */
 main {
-display: grid;
-grid-template-columns: 45% 45%;
-grid-column-gap: 5%;
-max-width: 1550px;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-column-gap: 5%;
+  max-width: 1550px;
 }
 
 #bericht {
-font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 #slapen-plaatje, #lunchen-plaatje, #opstaan-plaatje {
-display: block;
-width: 20%;
-margin-left: 40%;
+  display: block;
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 30px;
 }
 
 }

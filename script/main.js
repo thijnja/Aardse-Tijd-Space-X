@@ -1,4 +1,4 @@
-// klok js
+//--------- KLOK --------
 var klok = document.getElementById('klok');
 
 function time() {
@@ -12,34 +12,35 @@ klok.textContent =
 
 setInterval(time, 1000);
 
-// datum js
+//--------- DATUM ---------
 var today = new Date();
 
 var datum = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear();
 var h = today.getHours();
-
+	// Toon de datum in html
 document.getElementById('datum').innerHTML = datum;
 
 
-// berichtgeving js
+// --------- BERICHT ---------
+	// Nieuwe variabelen
 var achtergrond = document.getElementById('achtergrond');
 var titel1 = document.getElementById('titel1');
 var titel2 = document.getElementById('titel2');
 
 
-// het is ochtend
+	// het is ochtend
 if(h >=6 && h < 12){
 document.getElementById('opstaan').className ='laatZien';
 achtergrond.classList.add('veranderKleurOchtend');
 }
 
-// het is middag
+	// het is middag
 else if(h >= 12 && h < 18){
 document.getElementById('lunchen').className ='laatZien';
 achtergrond.classList.add('veranderKleurMiddag');
 }
 
-// het is avond
+	// het is avond
 else{
 document.getElementById('slapen').className ='laatZien';
 achtergrond.classList.add('veranderKleurAvond');  
